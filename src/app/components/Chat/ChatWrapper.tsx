@@ -3,6 +3,12 @@ import { useChat } from "ai/react";
 import React, { ChangeEvent, FormEvent, Ref, forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import Messages from "./Messages";
+import Button from '@mui/material/Button';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
+import Fingerprint from '@mui/icons-material/Fingerprint';
+import AssistantIcon from '@mui/icons-material/Assistant';
 
 export interface ChatInterface {
     handleMessageSubmit: (e: FormEvent<HTMLFormElement>) => void;
@@ -67,6 +73,25 @@ const Chat: React.FC<ChatProps> = forwardRef<ChatInterface, ChatProps>(({ withCo
                 {context ? <Messages messages={messages} withContext={withContext} context={context} /> : <Messages messages={messages} withContext={withContext} />}
                 <div ref={bottomChatRef} />
             </div>
+            <Stack direction="row" spacing={1}>
+                <Button
+                    startIcon={<AssistantIcon />}
+                    variant="outlined" size="small"
+                    color="primary"
+                    onClick={function () { console.log("Button clicked") }}
+                >
+                    Daily Reflection
+                </Button>
+
+                <Button
+                    startIcon={<Fingerprint />}
+                    variant="outlined" size="small"
+                    color="secondary"
+                    onClick={function () { console.log("Button clicked") }}
+                >
+                    Phone a friend
+                </Button>
+            </Stack>
         </div >
     );
 });
