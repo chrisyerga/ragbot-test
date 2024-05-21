@@ -1,19 +1,20 @@
 export const urls = [
   {
-    url: "https://www.wired.com/story/fast-forward-toyota-robots-learning-housework/",
-    title: "Toyota's Robots are Learning Housework",
+    url: "https://americanaddictioncenters.org/therapy-treatment/dialectical-behavioral-therapy",
+    title: "DBT for Addiction Treatment",
     seeded: false,
     loading: false,
   },
   {
-    url: "https://www.wired.com/story/synthetic-data-is-a-dangerous-teacher/",
-    title: "Synthetic Data Is a Dangerous Teacher",
+    url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2797106/",
+    title: "NIH DBT for Addiction",
     seeded: false,
     loading: false,
   },
   {
-    url: "https://www.wired.com/story/staying-one-step-ahead-of-hackers-when-it-comes-to-ai/",
-    title: "Staying Ahead of Hackers When It Comes to AI",
+    url: "https://dialecticalbehaviortherapy.com/",
+    title: "DBT dot com",
     seeded: false,
     loading: false,
-  }]
+  },
+]

@@ -43,7 +43,12 @@ async function seed(url: string, limit: number, indexName: string, options: Seed
     const indexList = await pinecone.listIndexes();
     const indexes = indexList.indexes
     const indexExists = indexes && indexes.some(index => index.name === indexName)
+
+    //    console.log(`index count=${indexes.count}`)
+    //    console.log(`index[0].name]{indexes[0].name}`)
     if (!indexExists) {
+      console.log("Index doesn't exist -- creating")
+      console.log(`    REGION=${PINECONE_REGION}`)
       await pinecone.createIndex({
         name: indexName,
         dimension: 1536,
