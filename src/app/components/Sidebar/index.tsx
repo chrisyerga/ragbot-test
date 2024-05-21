@@ -122,13 +122,13 @@ export const Sidebar: React.FC = () => {
     >
       <div style={{ ...styles.textHeaderWrapper, flexDirection: "column" as "column" }} className="w-full">
         <Header />
-        <div style={{ marginTop: 24, marginBottom: 24 }}>
-          This RAG chatbot uses Pinecone and Vercel&apos;s AI SDK to demonstrate a URL crawl, data chunking and embedding, and semantic questioning.
+        <div style={{ marginTop: 16, marginBottom: 24 }}>
+          Diary Entry: Tell me how you are feeling right now. If you are struggling you can ask for suggestions as well.
         </div>
       </div>
       <div className="flex flex-column w-full" style={{ ...styles.textHeaderWrapper, flexDirection: "column", }}>
         <div className="mb-6 w-full">
-          <h4 style={styles.h4}>Select demo url to index</h4>
+          <h4 style={styles.h4}>Add fine-tuning data by crawling URLs</h4>
           <Select className="w-full" value={url} data-testid="url-selector" onChange={handleUrlChange} IconComponent={ExpandMoreIcon} MenuProps={{
             keepMounted: true,
             PaperProps: {
